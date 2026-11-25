@@ -11,7 +11,8 @@ konten.json:
      "bad": "...", "good": "...", "icon": "target"},
     {"type": "fact", "big": "42%", "label": "...", "body": "...", "source": "Sumber: ..."},
     {"type": "text", "kicker": "...", "title": "...", "body": "..."},
-    {"type": "closing", "title": "...", "items": ["..."], "cta": "..."}
+    {"type": "closing", "title": "...", "items": ["..."], "cta": "..."},
+    {"type": "photo", "src": "foto/2026-12-01-reses/a.jpg", "label": "SEBELUM", "kicker": "...", "title": "...", "body": "...", "layout": "full|frame"}
   ]
 }
 Ikon: target, pin, camera, people, bulb, phone, shield, globe, chip, news, check, warn
@@ -344,7 +345,38 @@ def s_closing(im, d, sl, p, theme, rnd):
     d.text((x + d.textlength(a, font=fa), H - 300), b, font=fa, fill=BRAND_BLUE if sum(p["bg"][1]) > 500 else BRAND_Y)
     return d
 
-LAYOUT = {"cover": s_cover, "point": s_point, "fact": s_fact, "text": s_text, "closing": s_closing}
+def s_photo(im, d, sl, p, theme, rnd):
+    """Slide foto lapangan: {"type":"photo","src":"foto/.../a.jpg","kicker":"...","title":"...","body":"...","label":"SEBELUM"}"""
+    ph = Image.open(sl["src"]).convert("RGB")
+    lay = sl.get("layout") or rnd.choice(["full", "frame"])
+    if lay == "full":
+        r = max(W / ph.width, H / ph.height)
+        ph = ph.resize((int(ph.width * r + 1), int(ph.height * r + 1)))
+        ph = ph.crop(((ph.width - W) // 2, (ph.height - H) // 2, (ph.width - W) // 2 + W, (ph.height - H) // 2 + H))
+        im.paste(ph, (0, 0))
+        ov = np.zeros((H, W, 4), np.uint8); ov[..., :3] = NAVY
+        a = np.clip((np.linspace(0, 1, H) - .45) / .4, 0, 1) * 235
+        top = np.clip((.16 - np.linspace(0, 1, H)) / .16, 0, 1) * 150
+        ov[..., 3] = np.maximum(a, top)[:, None].astype(np.uint8)
+        im.paste(Image.fromarray(ov, "RGBA"), (0, 0), Image.fromarray(ov, "RGBA"))
+        d = ImageDraw.Draw(im); y = 1180; fg, mu = WHITE, (210, 220, 245)
+    else:
+        bw, bh = 900, 900
+        r = max(bw / ph.width, bh / ph.height)
+        ph = ph.resize((int(ph.width * r + 1), int(ph.height * r + 1)))
+        ph = ph.crop(((ph.width - bw) // 2, (ph.height - bh) // 2, (ph.width - bw) // 2 + bw, (ph.height - bh) // 2 + bh))
+        card(im, (80, 230, 80 + bw + 20, 230 + bh + 20), WHITE, radius=20)
+        im.paste(ph, (90, 240)); d = ImageDraw.Draw(im); y = 1220; fg, mu = p["fg"], p["mu"]
+    if sl.get("label"):
+        f = font(40, "x"); w = d.textlength(sl["label"], font=f)
+        d.rounded_rectangle((90, 260 if lay == "full" else 270, 90 + w + 48, (260 if lay == "full" else 270) + 72), radius=14, fill=BRAND_Y)
+        d.text((114, (268 if lay == "full" else 278)), sl["label"], font=f, fill=NAVY)
+    if sl.get("kicker"): d.text((90, y), sl["kicker"].upper(), font=font(48, "b"), fill=BRAND_Y if lay == "full" else p["ac"]); y += 70
+    if sl.get("title"): y = block(d, 90, y, sl["title"], fit(d, sl["title"], 900, 2, 96), fg, 900, 1.08) + 40
+    if sl.get("body"): block(d, 90, y, sl["body"], font(40, "m"), mu, 900, 1.35)
+    return d
+
+LAYOUT = {"photo": s_photo, "cover": s_cover, "point": s_point, "fact": s_fact, "text": s_text, "closing": s_closing}
 
 def render(spec, out):
     os.makedirs(out, exist_ok=True)
