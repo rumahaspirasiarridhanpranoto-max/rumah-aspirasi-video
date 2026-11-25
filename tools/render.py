@@ -348,6 +348,12 @@ def s_closing(im, d, sl, p, theme, rnd):
 def s_photo(im, d, sl, p, theme, rnd):
     """Slide foto lapangan: {"type":"photo","src":"foto/.../a.jpg","kicker":"...","title":"...","body":"...","label":"SEBELUM"}"""
     ph = Image.open(sl["src"]).convert("RGB")
+    if sl.get("enhance", True):  # edit otomatis: kontras, warna, sedikit hangat, tajam
+        from PIL import ImageOps, ImageEnhance
+        ph = ImageOps.autocontrast(ph, cutoff=1)
+        ph = ImageEnhance.Color(ph).enhance(1.15); ph = ImageEnhance.Contrast(ph).enhance(1.06)
+        a_ = np.asarray(ph).astype(float); a_[..., 0] *= 1.03; a_[..., 2] *= .97
+        ph = Image.fromarray(np.clip(a_, 0, 255).astype(np.uint8)).filter(ImageFilter.UnsharpMask(2, 70, 2))
     lay = sl.get("layout") or ("wide" if ph.width / ph.height > 1.2 else rnd.choice(["full", "frame"]))
     if lay == "wide":  # foto lanskap (foto bersama): tampil utuh, tidak terpotong
         # latar: foto yang sama diperbesar + blur + lapisan navy -> kesan sinematik
