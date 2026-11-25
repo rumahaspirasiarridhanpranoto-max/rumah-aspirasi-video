@@ -350,11 +350,27 @@ def s_photo(im, d, sl, p, theme, rnd):
     ph = Image.open(sl["src"]).convert("RGB")
     lay = sl.get("layout") or ("wide" if ph.width / ph.height > 1.2 else rnd.choice(["full", "frame"]))
     if lay == "wide":  # foto lanskap (foto bersama): tampil utuh, tidak terpotong
-        bw = 940; bh = int(bw * ph.height / ph.width)
-        ph = ph.resize((bw, bh)); top = 430
-        card(im, (60, top, 60 + bw + 20, top + bh + 20), WHITE, radius=18)
-        im.paste(ph, (70, top + 10)); d = ImageDraw.Draw(im)
-        y = top + bh + 110; fg, mu = p["fg"], p["mu"]
+        # latar: foto yang sama diperbesar + blur + lapisan navy -> kesan sinematik
+        r = max(W / ph.width, H / ph.height)
+        bg = ph.resize((int(ph.width * r + 1), int(ph.height * r + 1)))
+        bg = bg.crop(((bg.width - W) // 2, (bg.height - H) // 2, (bg.width - W) // 2 + W, (bg.height - H) // 2 + H)).filter(ImageFilter.GaussianBlur(28))
+        ov = np.asarray(bg, float) * .35 + np.array(NAVY, float) * .65
+        grad = np.linspace(0, 1, H)[:, None, None]
+        ov = ov * (1 - .35 * grad) + np.array((6, 10, 30), float) * .35 * grad
+        im.paste(Image.fromarray(np.clip(ov, 0, 255).astype(np.uint8)), (0, 0))
+        bw = 960; bh = int(bw * ph.height / ph.width)
+        ph = ph.resize((bw, bh), Image.LANCZOS); top = 400
+        # bingkai putih tipis + bayangan, sedikit miring agar dinamis
+        fr = Image.new("RGBA", (bw + 24, bh + 24), (255, 255, 255, 255)); fr.paste(ph, (12, 12))
+        fr = fr.rotate(rnd.choice([-2, -1.5, 1.5, 2]), expand=True, resample=Image.BICUBIC)
+        sh = Image.new("RGBA", im.size, (0, 0, 0, 0)); a_ = fr.split()[3]
+        sh.paste((0, 0, 0, 140), (int((W - fr.width) / 2) + 14, top + 22), a_); sh = sh.filter(ImageFilter.GaussianBlur(18))
+        im.paste(sh, (0, 0), sh); im.paste(fr, (int((W - fr.width) / 2), top), fr)
+        d = ImageDraw.Draw(im)
+        # aksen garis brand
+        d.rectangle((90, top + bh + 120, 250, top + bh + 132), fill=BRAND_Y)
+        y = top + bh + 170; fg, mu = WHITE, (205, 215, 240)
+        p = dict(p, ac=BRAND_Y)
         if sl.get("label"):
             f = font(40, "x"); w = d.textlength(sl["label"], font=f)
             d.rounded_rectangle((90, top - 40, 90 + w + 48, top + 32), radius=14, fill=BRAND_Y)
@@ -403,7 +419,7 @@ def render(spec, out):
         im = make_bg(p, rnd); decorate(im, p, theme, rnd)
         d = ImageDraw.Draw(im)
         d = LAYOUT[sl["type"]](im, d, sl, p, theme, rnd) or ImageDraw.Draw(im)
-        d = ImageDraw.Draw(im); badge(d, p); footer(d, i, n, p)
+        d = ImageDraw.Draw(im); badge(d, p); footer(d, i, n, dict(p, mu=(200, 210, 235)) if sl["type"] == "photo" else p)
         fn = os.path.join(out, f"slide_{i}.jpg"); im.save(fn, quality=92); files.append(fn)
     th = [Image.open(f).resize((270, 480)) for f in files]
     cols = min(4, n); rows = (n + cols - 1) // cols
