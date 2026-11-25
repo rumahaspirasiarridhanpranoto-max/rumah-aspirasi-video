@@ -1,0 +1,10 @@
+{"theme":"viral","seed":21,"slides":[
+ {"type":"cover","kicker":"Benar atau Salah?","title":"3 mitos layanan publik yang masih dipercaya","sub":"Tebak dulu, baru geser","icon":"warn"},
+ {"type":"text","kicker":"Mitos #1","title":"Urus KTP, KK, atau akta kelahiran harus bayar","body":"Benar atau salah? Tulis tebakanmu di komentar, lalu geser untuk jawabannya."},
+ {"type":"fact","label":"Jawaban mitos #1","big":"SALAH","body":"Pengurusan dan penerbitan dokumen kependudukan tidak dipungut biaya. Kalau diminta bayar, itu pungutan liar dan bisa dilaporkan.","source":"Dasar: Pasal 79A UU 24/2013 tentang Administrasi Kependudukan"},
+ {"type":"text","kicker":"Mitos #2","title":"Mau mengadu soal pelayanan publik harus datang ke kantor","body":"Benar atau salah? Tebak dulu sebelum geser."},
+ {"type":"fact","label":"Jawaban mitos #2","big":"SALAH","body":"Ada kanal pengaduan nasional SP4N-LAPOR! yang bisa diakses online lewat lapor.go.id atau aplikasinya, langsung dari HP.","source":"Dasar: Perpres 76/2013 tentang Pengelolaan Pengaduan Pelayanan Publik"},
+ {"type":"text","kicker":"Mitos #3","title":"Lapor ke Ombudsman itu bayar dan harus pakai pengacara","body":"Benar atau salah? Ini yang paling sering salah kaprah."},
+ {"type":"fact","label":"Jawaban mitos #3","big":"SALAH","body":"Ombudsman bertugas menerima laporan dugaan maladministrasi pelayanan publik dari masyarakat, dan layanannya gratis.","source":"Dasar: Pasal 7 UU 37/2008 tentang Ombudsman RI; ombudsman.go.id"},
+ {"type":"closing","title":"Kamu benar berapa?","items":["Tulis skormu: 0, 1, 2, atau 3","Kirim ke teman yang masih percaya mitos ini","Follow untuk mitos berikutnya"],"cta":"Punya mitos lain? Tulis di komentar, kami cek kebenarannya"}
+]}

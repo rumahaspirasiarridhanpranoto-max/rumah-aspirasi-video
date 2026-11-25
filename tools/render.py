@@ -85,14 +85,14 @@ def make_bg(p, rnd):
         im = Image.fromarray(np.clip(np.asarray(im, float) + np.asarray(g, float) * .35, 0, 255).astype(np.uint8))
     return im
 
-def decorate(im, p, theme, rnd):
+def decorate(im, p, theme, rnd, kind=""):
     d = ImageDraw.Draw(im)
     base = p["bg"][1]
     dim = lighten(base, .12) if sum(base) < 380 else darken(base, .07)
     m = rnd.choice(["dots", "rings", "stripes", "grid", "blob"])
     if theme == "tekno": m = rnd.choice(["grid", "circuit"])
     if theme == "dunia": m = rnd.choice(["lat", "rings"])
-    if theme == "viral": m = rnd.choice(["stripes", "ticker"])
+    if theme == "viral": m = rnd.choice(["stripes", "ticker"]) if kind != "closing" else "stripes"
     if m == "dots":
         x0, y0 = rnd.choice([(80, 230), (760, 230), (760, 1500)])
         for i in range(7):
@@ -207,7 +207,8 @@ def fit(d, text, maxw, maxlines, start, minsize=60, w="x"):
     s = start
     while s > minsize:
         f = font(s, w)
-        if len(wrap(d, text, f, maxw)) <= maxlines: return f
+        ls = wrap(d, text, f, maxw)
+        if len(ls) <= maxlines and all(d.textlength(l, font=f) <= maxw for l in ls): return f
         s -= 6
     return font(minsize, w)
 
@@ -422,7 +423,7 @@ def render(spec, out):
     for i, sl in enumerate(spec["slides"], 1):
         choices = [q for q in pals if q is not prev] or pals
         p = choices[(i + rnd.randint(0, 5)) % len(choices)]; prev = p
-        im = make_bg(p, rnd); decorate(im, p, theme, rnd)
+        im = make_bg(p, rnd); decorate(im, p, theme, rnd, sl["type"])
         d = ImageDraw.Draw(im)
         d = LAYOUT[sl["type"]](im, d, sl, p, theme, rnd) or ImageDraw.Draw(im)
         d = ImageDraw.Draw(im); badge(d, p); footer(d, i, n, dict(p, mu=(200, 210, 235)) if sl["type"] == "photo" else p)
