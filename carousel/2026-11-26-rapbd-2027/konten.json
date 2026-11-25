@@ -1,0 +1,8 @@
+{"theme":"aspirasi","seed":11,"slides":[
+ {"type":"photo","src":"foto/2026-11-25-rapbd-perkim/a.jpg","layout":"wide","label":"KERJA NYATA","kicker":"Pembahasan RAPBD 2027","title":"Anggaran 2027 untuk lingkunganmu sedang dibahas","body":"Bersama Dinas Perumahan dan Kawasan Permukiman (Perkim)."},
+ {"type":"text","kicker":"Kenal dulu","title":"Apa itu RAPBD?","body":"Rancangan APBD: rencana pendapatan dan belanja daerah untuk satu tahun. Kepala daerah mengajukannya, lalu dibahas bersama DPRD untuk mendapat persetujuan bersama.","source":"Dasar: Pasal 311 UU 23/2014 tentang Pemerintahan Daerah"},
+ {"type":"fact","label":"Batas waktu persetujuan","big":"1 Bulan","body":"RAPBD wajib disetujui bersama kepala daerah dan DPRD paling lambat 1 bulan sebelum tahun anggaran dimulai. Untuk 2027, artinya akhir November ini.","source":"Dasar: Pasal 312 ayat (1) UU 23/2014"},
+ {"type":"point","num":"","kicker":"Kenapa Dinas Perkim?","title":"Dekat dengan rumahmu","body":"Dinas ini mengurus perumahan dan kawasan permukiman, urusan yang menyentuh lingkungan tempat tinggal warga sehari-hari.","icon":"pin"},
+ {"type":"point","num":"","kicker":"Peran warga","title":"Aspirasimu bisa masuk","body":"Pembahasan RAPBD berpedoman pada dokumen perencanaan seperti RKPD, KUA, dan PPAS. Usulan warga lewat Musrenbang dan reses masuk dari tahap perencanaan itu.","icon":"people"},
+ {"type":"closing","title":"Lingkunganmu butuh apa di 2027?","items":["Tulis di komentar","Sebut kelurahan/lingkunganmu","Kami catat untuk dikawal"],"cta":"Ikuti terus untuk update pembahasan anggaran"}
+]}

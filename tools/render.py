@@ -348,7 +348,21 @@ def s_closing(im, d, sl, p, theme, rnd):
 def s_photo(im, d, sl, p, theme, rnd):
     """Slide foto lapangan: {"type":"photo","src":"foto/.../a.jpg","kicker":"...","title":"...","body":"...","label":"SEBELUM"}"""
     ph = Image.open(sl["src"]).convert("RGB")
-    lay = sl.get("layout") or rnd.choice(["full", "frame"])
+    lay = sl.get("layout") or ("wide" if ph.width / ph.height > 1.2 else rnd.choice(["full", "frame"]))
+    if lay == "wide":  # foto lanskap (foto bersama): tampil utuh, tidak terpotong
+        bw = 940; bh = int(bw * ph.height / ph.width)
+        ph = ph.resize((bw, bh)); top = 430
+        card(im, (60, top, 60 + bw + 20, top + bh + 20), WHITE, radius=18)
+        im.paste(ph, (70, top + 10)); d = ImageDraw.Draw(im)
+        y = top + bh + 110; fg, mu = p["fg"], p["mu"]
+        if sl.get("label"):
+            f = font(40, "x"); w = d.textlength(sl["label"], font=f)
+            d.rounded_rectangle((90, top - 40, 90 + w + 48, top + 32), radius=14, fill=BRAND_Y)
+            d.text((114, top - 32), sl["label"], font=f, fill=NAVY)
+        if sl.get("kicker"): d.text((90, y), sl["kicker"].upper(), font=font(52, "b"), fill=p["ac"]); y += 80
+        if sl.get("title"): y = block(d, 90, y, sl["title"], fit(d, sl["title"], 900, 3, 112), fg, 900, 1.08) + 40
+        if sl.get("body"): block(d, 90, y, sl["body"], font(42, "m"), mu, 900, 1.35)
+        return d
     if lay == "full":
         r = max(W / ph.width, H / ph.height)
         ph = ph.resize((int(ph.width * r + 1), int(ph.height * r + 1)))
