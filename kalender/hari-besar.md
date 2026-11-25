@@ -4,9 +4,6 @@ Sumber: SKB 3 Menteri No. 1205/3/2 Tahun 2026 (libur nasional & cuti bersama 202
 
 | Tanggal | Hari | Peringatan | Jenis | Kelompok |
 |---|---|---|---|---|
-| 1 Desember 2026 | SELASA | Hari AIDS Sedunia | opsional | umum |
-| 3 Desember 2026 | KAMIS | Hari Disabilitas Internasional | opsional | umum |
-| 9 Desember 2026 | RABU | Hari Antikorupsi Sedunia | opsional | umum |
 | 13 Desember 2026 | MINGGU | Hari Nusantara | opsional | nasional |
 | 19 Desember 2026 | SABTU | Hari Bela Negara | opsional | nasional |
 | 22 Desember 2026 | SELASA | Hari Ibu | UCAPAN | nasional |
@@ -19,7 +16,7 @@ Sumber: SKB 3 Menteri No. 1205/3/2 Tahun 2026 (libur nasional & cuti bersama 202
 | 10 Maret 2027 | RABU | Idulfitri 1448 H (tanggal final menunggu sidang isbat) | UCAPAN | Islam |
 | 28 Maret 2027 | MINGGU | Paskah (Kebangkitan Yesus Kristus) | UCAPAN | Kristiani |
 | 21 April 2027 | RABU | Hari Kartini | UCAPAN | nasional |
-| 1 Mei 2027 | SABTU | Hari Buruh Internasional | opsional | umum |
+| 1 Mei 2027 | SABTU | Hari Buruh (libur nasional Indonesia) | opsional | nasional |
 | 2 Mei 2027 | MINGGU | Hari Pendidikan Nasional | UCAPAN | nasional |
 | 6 Mei 2027 | KAMIS | Kenaikan Yesus Kristus | UCAPAN | Kristiani |
 | 17 Mei 2027 | SENIN | Iduladha 1448 H (tanggal final menunggu Kemenag) + Hari Jadi Kota Binjai | UCAPAN | Islam/Binjai |
@@ -35,4 +32,5 @@ Sumber: SKB 3 Menteri No. 1205/3/2 Tahun 2026 (libur nasional & cuti bersama 202
 | 25 Desember 2027 | SABTU | Hari Natal | UCAPAN | Kristiani |
 | 26 Desember 2027 | MINGGU | Isra Mikraj Nabi Muhammad SAW 1449 H | UCAPAN | Islam |
 
-UCAPAN = wajib dibuat kartu ucapan. opsional = boleh dibuat bila relevan dan tidak membuat feed terlalu padat (maks 1 ucapan opsional per minggu).
+Hanya hari besar UCAPAN = wajib dibuat kartu ucapan. opsional = boleh dibuat bila relevan dan tidak membuat feed terlalu padat (maks 1 ucapan opsional per minggu). peringatan INDONESIA (libur nasional, hari besar keagamaan yang diakui, hari peringatan nasional, Hari Jadi Kota Binjai). Jangan membuat ucapan untuk hari internasional.
+UCAPAN = wajib dibuat kartu ucapan. opsional = boleh bila relevan, maks 1 ucapan opsional per minggu.
