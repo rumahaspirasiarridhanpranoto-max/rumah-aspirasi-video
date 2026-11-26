@@ -1,1 +1,0 @@
-- 2026-11-25-rapbd-perkim → carousel 2026-11-26-rapbd-2027 (tayang 2026-11-26 18:00)
