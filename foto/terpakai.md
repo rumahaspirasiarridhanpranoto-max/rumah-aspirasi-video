@@ -1,1 +1,2 @@
 - 2026-11-25-rapbd-perkim → carousel 2026-11-26-rapbd-2027 (tayang 2026-11-26 18:00)
+- 2026-11-27-reses-dapil1 → carousel 2026-11-28-reses-dapil1 (tayang 2026-11-28 10:00; 09.jpg tidak dipakai karena ada anak)

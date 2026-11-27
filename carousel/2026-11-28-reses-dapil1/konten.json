@@ -1,0 +1,75 @@
+{
+ "theme": "aspirasi",
+ "seed": 28,
+ "slides": [
+  {
+   "type": "photo",
+   "src": "foto/2026-11-27-reses-dapil1/03.jpg",
+   "layout": "full",
+   "label": "JUMAT, 27 NOVEMBER 2026",
+   "kicker": "Kerja Nyata · Reses Dapil 1",
+   "title": "Malam Itu, Giliran Warga yang Bicara",
+   "body": "Reses Pertama Masa Sidang III Tahun 2026 di Pojok Gobali, Berngam."
+  },
+  {
+   "type": "photo",
+   "src": "foto/2026-11-27-reses-dapil1/06.jpg",
+   "layout": "frame",
+   "label": "MENDENGAR LANGSUNG",
+   "kicker": "Dari kursi ke kursi",
+   "title": "Bertemu warga satu per satu",
+   "body": "Tidak hanya dari depan. Warga Dapil 1 Binjai Kota ditemui langsung di tempat duduknya."
+  },
+  {
+   "type": "text",
+   "kicker": "Kenal dulu",
+   "title": "Apa itu reses?",
+   "body": "Masa ketika anggota DPRD turun menemui warga di daerah pemilihannya. Tahun sidang DPRD dibagi 3 masa persidangan, dan tiap masa persidangan punya masa reses.",
+   "source": "Dasar: Pasal 87 PP 12/2018 tentang Pedoman Tata Tertib DPRD"
+  },
+  {
+   "type": "fact",
+   "big": "6 Hari",
+   "label": "Batas satu kali reses",
+   "body": "Untuk DPRD kabupaten/kota, satu kali reses paling lama 6 hari kerja. Waktunya singkat, jadi setiap pertemuan berharga.",
+   "source": "Dasar: Pasal 88 ayat (1) PP 12/2018"
+  },
+  {
+   "type": "photo",
+   "src": "foto/2026-11-27-reses-dapil1/08.jpg",
+   "layout": "frame",
+   "label": "SUARA WARGA",
+   "kicker": "Pojok Gobali, Berngam",
+   "title": "Didengar, lalu dicatat",
+   "body": "Cerita dan keluhan warga menjadi bahan laporan hasil reses."
+  },
+  {
+   "type": "point",
+   "num": "",
+   "kicker": "Setelah reses",
+   "title": "Aspirasi tidak berhenti di sini",
+   "body": "Anggota DPRD wajib melaporkan hasil reses kepada Pimpinan DPRD, termasuk tanggapan, aspirasi, dan pengaduan masyarakat. (Pasal 88 ayat 5 PP 12/2018)",
+   "source": "Dasar: Pasal 88 ayat (5) PP 12/2018",
+   "icon": "check"
+  },
+  {
+   "type": "photo",
+   "src": "foto/2026-11-27-reses-dapil1/07.jpg",
+   "layout": "frame",
+   "label": "TERIMA KASIH",
+   "kicker": "Warga Dapil 1 Binjai Kota",
+   "title": "Terima kasih sudah datang",
+   "body": "Kehadiran warga adalah alasan reses ini ada."
+  },
+  {
+   "type": "closing",
+   "title": "Tidak sempat hadir semalam?",
+   "items": [
+    "Tulis aspirasimu di komentar",
+    "Sebut kelurahanmu",
+    "Kami catat untuk dikawal"
+   ],
+   "cta": "Follow untuk kabar tindak lanjut reses"
+  }
+ ]
+}
