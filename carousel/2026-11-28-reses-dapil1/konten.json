@@ -1,68 +1,78 @@
 {
- "theme": "aspirasi",
- "seed": 28,
+ "style": "photostory",
+ "seed": 5,
  "slides": [
   {
-   "type": "photo",
+   "type": "hero",
    "src": "foto/2026-11-27-reses-dapil1/03.jpg",
-   "layout": "full",
-   "label": "JUMAT, 27 NOVEMBER 2026",
-   "kicker": "Kerja Nyata · Reses Dapil 1",
-   "title": "Malam Itu, Giliran Warga yang Bicara",
-   "body": "Reses Pertama Masa Sidang III Tahun 2026 di Pojok Gobali, Berngam."
+   "focus": 0.35,
+   "date": "JUMAT, 27 NOVEMBER 2026",
+   "loc": "Pojok Gobali, Berngam",
+   "kicker": "Reses Dapil 1 Binjai Kota",
+   "title": "Malam Itu,|Giliran Warga yang Bicara",
+   "body": "Reses Pertama Masa Sidang III Tahun 2026"
   },
   {
-   "type": "photo",
+   "type": "collage",
+   "srcs": [
+    "foto/2026-11-27-reses-dapil1/02.jpg",
+    "foto/2026-11-27-reses-dapil1/05.jpg",
+    "foto/2026-11-27-reses-dapil1/10.jpg"
+   ],
+   "tag": "BUKAN SEKADAR SAMBUTAN",
+   "title": "Bicara sebentar,|lalu mendengar",
+   "body": "Warga Dapil 1 Binjai Kota hadir dan berdialog langsung."
+  },
+  {
+   "type": "full",
    "src": "foto/2026-11-27-reses-dapil1/06.jpg",
-   "layout": "frame",
-   "label": "MENDENGAR LANGSUNG",
-   "kicker": "Dari kursi ke kursi",
-   "title": "Bertemu warga satu per satu",
-   "body": "Tidak hanya dari depan. Warga Dapil 1 Binjai Kota ditemui langsung di tempat duduknya."
+   "focus": 0.25,
+   "tag": "DARI KURSI KE KURSI",
+   "title": "Menemui warga|satu per satu",
+   "body": "Selain dari depan, warga juga ditemui langsung di tempat duduknya."
   },
   {
-   "type": "text",
-   "kicker": "Kenal dulu",
+   "type": "glass",
+   "src": "foto/2026-11-27-reses-dapil1/10.jpg",
+   "focus": 0.42,
+   "tag": "KENAL DULU",
    "title": "Apa itu reses?",
-   "body": "Masa ketika anggota DPRD turun menemui warga di daerah pemilihannya. Tahun sidang DPRD dibagi 3 masa persidangan, dan tiap masa persidangan punya masa reses.",
+   "body": "Masa anggota DPRD turun menemui warga di daerah pemilihannya. Tahun sidang DPRD dibagi 3 masa persidangan, dan tiap masa persidangan punya masa reses.",
    "source": "Dasar: Pasal 87 PP 12/2018 tentang Pedoman Tata Tertib DPRD"
   },
   {
-   "type": "fact",
+   "type": "full",
+   "src": "foto/2026-11-27-reses-dapil1/08.jpg",
+   "focus": 0.3,
+   "tag": "SUARA WARGA",
+   "title": "Cerita warga|jadi laporan",
+   "body": "Tanggapan, aspirasi, dan pengaduan warga wajib dilaporkan ke Pimpinan DPRD (Pasal 88 ayat 5 PP 12/2018)."
+  },
+  {
+   "type": "glass",
+   "src": "foto/2026-11-27-reses-dapil1/05.jpg",
+   "focus": 0.4,
+   "tag": "WAKTUNYA SINGKAT",
    "big": "6 Hari",
-   "label": "Batas satu kali reses",
-   "body": "Untuk DPRD kabupaten/kota, satu kali reses paling lama 6 hari kerja. Waktunya singkat, jadi setiap pertemuan berharga.",
+   "title": "Batas satu kali reses",
+   "body": "Untuk DPRD kabupaten/kota, satu kali reses paling lama 6 hari kerja. Karena itu setiap pertemuan berharga.",
    "source": "Dasar: Pasal 88 ayat (1) PP 12/2018"
   },
   {
-   "type": "photo",
-   "src": "foto/2026-11-27-reses-dapil1/08.jpg",
-   "layout": "frame",
-   "label": "SUARA WARGA",
-   "kicker": "Pojok Gobali, Berngam",
-   "title": "Didengar, lalu dicatat",
-   "body": "Cerita dan keluhan warga menjadi bahan laporan hasil reses."
-  },
-  {
-   "type": "point",
-   "num": "",
-   "kicker": "Setelah reses",
-   "title": "Aspirasi tidak berhenti di sini",
-   "body": "Anggota DPRD wajib melaporkan hasil reses kepada Pimpinan DPRD, termasuk tanggapan, aspirasi, dan pengaduan masyarakat. (Pasal 88 ayat 5 PP 12/2018)",
-   "source": "Dasar: Pasal 88 ayat (5) PP 12/2018",
-   "icon": "check"
-  },
-  {
-   "type": "photo",
+   "type": "full",
    "src": "foto/2026-11-27-reses-dapil1/07.jpg",
-   "layout": "frame",
-   "label": "TERIMA KASIH",
-   "kicker": "Warga Dapil 1 Binjai Kota",
-   "title": "Terima kasih sudah datang",
+   "focus": 0.45,
+   "tag": "TERIMA KASIH",
+   "title": "Terima kasih,|warga Dapil 1!",
    "body": "Kehadiran warga adalah alasan reses ini ada."
   },
   {
    "type": "closing",
+   "srcs": [
+    "foto/2026-11-27-reses-dapil1/06.jpg",
+    "foto/2026-11-27-reses-dapil1/07.jpg",
+    "foto/2026-11-27-reses-dapil1/08.jpg"
+   ],
    "title": "Tidak sempat hadir semalam?",
    "items": [
     "Tulis aspirasimu di komentar",
