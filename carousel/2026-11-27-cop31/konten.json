@@ -1,0 +1,14 @@
+{
+ "theme": "dunia",
+ "seed": 27,
+ "slides": [
+  {"type": "cover", "kicker": "COP31 · ANTALYA, TURKI", "title": "KTT Iklim Dunia Gagal Sepakat. Lalu Kita?", "sub": "Hampir 200 negara berunding di Antalya, Turki. Hasil akhirnya: tanpa kesepakatan.", "icon": "globe"},
+  {"type": "text", "kicker": "Kenal dulu", "title": "Apa itu COP31?", "body": "Konferensi iklim tahunan PBB. Tahun ini digelar di Antalya, Turki, mulai 9 November 2026, dan baru ditutup Minggu, 22 November 2026.", "source": "Sumber: CNBC Indonesia, IDN Times, BBVA"},
+  {"type": "fact", "big": "49+ Jam", "label": "Molor dari jadwal", "body": "Disebut sebagai KTT iklim terlama dalam sejarah. Meski diperpanjang, perundingan tetap berakhir tanpa kesepakatan.", "source": "Sumber: CNBC Indonesia, IDN Times"},
+  {"type": "point", "num": "1", "kicker": "Batu sandungan utama", "title": "Soal bahan bakar fosil", "body": "Negara produsen minyak menolak penyebutan penghapusan bahan bakar fosil. Uni Eropa dan sejumlah negara lain menolak draf yang tidak memuatnya.", "icon": "warn"},
+  {"type": "fact", "big": "US$120 M", "label": "Target dana iklim yang hilang", "body": "Target pendanaan iklim sebesar US$120 miliar yang diharapkan negara berkembang hilang dari draf akhir \"Pakta Antalya\".", "source": "Sumber: CNBC Indonesia, IDN Times"},
+  {"type": "point", "num": "2", "kicker": "Apa artinya bagi kita?", "title": "Dunia belum sepakat, lingkungan tetap bisa bergerak", "body": "Kesepakatan global memengaruhi arah energi dan dana iklim. Tapi banyak langkah kecil di lingkungan sendiri tidak perlu menunggu siapa pun.", "bad": "Menunggu dunia sepakat dulu", "good": "Parit depan rumah bebas sampah sebelum puncak hujan", "icon": "pin"},
+  {"type": "text", "kicker": "Berikutnya", "title": "COP32 di Ethiopia, 2027", "body": "Pertemuan iklim berikutnya direncanakan di Addis Ababa, Ethiopia. Pekerjaan rumah soal fosil dan pendanaan akan kembali dibahas di sana.", "source": "Sumber: IDN Times, BBVA"},
+  {"type": "closing", "title": "Dampak cuaca apa paling terasa di lingkunganmu?", "items": ["Banjir / genangan", "Panas makin terik", "Parit tersumbat sampah"], "cta": "Follow, tiap Jumat kita bahas dunia dengan bahasa warga"}
+ ]
+}

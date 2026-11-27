@@ -263,7 +263,7 @@ def s_cover(im, d, sl, p, theme, rnd):
         lines = wrap(d, sl["sub"], fs, 840)
         hh = len(lines) * fs.size * 1.25 + 40
         d.rounded_rectangle((90, y + 30, 90 + tw, y + 30 + hh), radius=20, fill=p["fg"])
-        block(d, 120, y + 46, sl["sub"], fs, p["bg"][1] if p["bg"][0] == "flat" else p["ac"], 840, 1.25)
+        block(d, 120, y + 46, sl["sub"], fs, p["bg"][1] if p["bg"][0] == "flat" else p["bg"][2], 840, 1.25)
 
 def s_point(im, d, sl, p, theme, rnd):
     lay = rnd.choice(["iconL", "iconR", "band"])
