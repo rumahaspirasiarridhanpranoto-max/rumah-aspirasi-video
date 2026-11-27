@@ -171,7 +171,7 @@ def s_hero(sl, rnd):
 
 def s_full(sl, rnd):
     im = cover_crop(load(sl["src"]), W, H, sl.get("focus", .4))
-    top_shade(im); grad(im, 1000, 1720, a1=235)
+    top_shade(im); grad(im, 820, 1560, a1=242)
     im = grain(im, rnd, 6); d = ImageDraw.Draw(im, "RGBA")
     th = measure_title(d, sl["title"], start=104, maxlines=3); bh = measure_body(d, sl.get("body", ""), 42)
     y = H - 220 - bh - th - 110
