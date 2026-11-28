@@ -1,0 +1,80 @@
+{
+ "style": "poster",
+ "seed": 11,
+ "series": "BINJAI PUNYA CERITA #1",
+ "accent": "red",
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "Asal-usul nama kota",
+   "title": "Kenapa kota kita bernama",
+   "big": "BINJAI?",
+   "sub": "Jawabannya ada di tepi sebuah sungai, dan di bawah sebatang pohon.",
+   "art": "tree"
+  },
+  {
+   "type": "story",
+   "num": "01",
+   "title": "Berawal dari sebatang pohon",
+   "body": "Binjai adalah nama sebatang pohon besar dan rindang yang tumbuh di tepi Sungai Bingai. Pohon itulah yang kemudian memberi nama pada kotanya.",
+   "source": "Sumber: detikSumut (2024); Metro TV (2025)",
+   "art": "tree"
+  },
+  {
+   "type": "story",
+   "num": "02",
+   "title": "Kampung kecil di tepi Sungai Bingai",
+   "body": "Kota Binjai tumbuh dari sebuah kampung kecil di pinggir Sungai Bingai. Di bawah pohon binjai yang besar itu, warga menggelar upacara adat.",
+   "source": "Sumber: Metro TV (2025); Wikipedia",
+   "art": "river"
+  },
+  {
+   "type": "number",
+   "big": "22 KM",
+   "title": "Pintu gerbang Medan dari arah Aceh",
+   "body": "Binjai berjarak sekitar 22 km dari Medan. Siapa pun yang datang dari Aceh lewat jalur darat akan melewati Binjai lebih dulu.",
+   "source": "Sumber: detikSumut (2024); Metro TV (2025)",
+   "art": "pin"
+  },
+  {
+   "type": "story",
+   "num": "03",
+   "title": "Dulu ibu kota Kabupaten Langkat",
+   "body": "Sebelum berdiri sendiri, Binjai pernah menjadi ibu kota Kabupaten Langkat. Pusat pemerintahan Langkat kemudian dipindahkan ke Stabat.",
+   "source": "Sumber: detikSumut (2024); Metro TV (2025); Wikipedia",
+   "art": "monument"
+  },
+  {
+   "type": "list",
+   "title": "5 kecamatan, 37 kelurahan",
+   "items": [
+    "Binjai Kota",
+    "Binjai Utara",
+    "Binjai Selatan",
+    "Binjai Barat",
+    "Binjai Timur"
+   ],
+   "body": "",
+   "source": "Sumber: Metro TV (2025); Wikipedia",
+   "art": "map"
+  },
+  {
+   "type": "number",
+   "big": "KOTA RAMBUTAN",
+   "title": "Julukan yang melekat",
+   "body": "Binjai dikenal sebagai salah satu daerah penghasil rambutan terbanyak di Indonesia. Rambutan Binjai pun jadi salah satu varietas yang terkenal.",
+   "source": "Sumber: detikSumut (2024); Universitas Negeri Medan",
+   "art": "rambutan"
+  },
+  {
+   "type": "closing",
+   "title": "Kamu warga kecamatan mana?",
+   "items": [
+    "Tulis kecamatanmu di komentar",
+    "Ceritakan 1 tempat legendaris di sana"
+   ],
+   "cta": "Follow: Binjai Punya Cerita berlanjut",
+   "art": "rambutan"
+  }
+ ]
+}
