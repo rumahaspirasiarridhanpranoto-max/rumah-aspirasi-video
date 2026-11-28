@@ -9,7 +9,7 @@
 | 2026-11-27 10:00 | animasi tanpa narasi | Canva AI, gaya kapur | Suara Kecil Terdengar Luas | 443091191 |
 | 2026-11-27 18:00 | dunia (Jumat) | dunia + sampul renderer (Canva kuota habis) | KTT Iklim Dunia Gagal Sepakat. Lalu Kita? (COP31 Antalya) | 443805607 |
 | 2026-11-28 10:00 | kerja nyata | aspirasi + 9 foto (gaya photostory baru) | Reses Dapil 1: Malam Itu, Giliran Warga yang Bicara (+ edukasi reses PP 12/2018 Pasal 87–88) | 444638961 |
-| 2026-11-28 18:00 | Binjai Punya Cerita #1 (Sabtu) | gaya poster/majalah baru (tools/poster.py) | Kenapa Kota Kita Bernama Binjai? | ID_BPC1 |
+| 2026-11-28 18:00 | Binjai Punya Cerita #1 (Sabtu) | gaya poster/majalah baru (tools/poster.py) | Kenapa Kota Kita Bernama Binjai? | 445180582 |
 
 ## Topik yang SUDAH dibahas (jangan diulang)
 - Season 1 video (Nov 2026): syarat usulan/aspirasi gagal, jalur keluhan resmi vs grup WA, jadwal anggaran & Musrenbang, pokir bukan jatah dewan, pengawasan proyek oleh warga, Perda & partisipasi, menulis surat aspirasi yang kuat, menggalang suara warga, hak informasi publik/PPID, pengisian jabatan wapres (edisi khusus), season finale perjalanan aspirasi
