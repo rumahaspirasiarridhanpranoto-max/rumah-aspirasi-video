@@ -11,7 +11,8 @@ konten.json:
   "items": ["Lokasi persis", "Foto/video", "..."],
   "outro": "Laporan lengkap|lebih cepat ditindaklanjuti",
   "cta": "Kirim DM sekarang",
-  "mood": "tahunbaru"                          # suasana musik dari tools/ucapan_video.py
+  "mood": "tahunbaru",                         # suasana musik dari tools/ucapan_video.py
+  "basis": {"tag": "DASARNYA", "title": "...", "cards": [{"text": "...", "src": "UU .../Pasal ..."}]}  # opsional
 }
 Adegan: (1) komentar muncul sebagai gelembung, (2) judul, (3) daftar muncul satu per satu,
 (4) penutup + ajakan. Latar foto buram bergerak pelan (Ken Burns).
@@ -73,6 +74,8 @@ def frame(spec, bgs, t, T):
     # timeline (detik)
     s1, s2, s3 = 0.0, 3.2, 5.0
     s4 = s3 + 1.1 * len(spec["items"]) + 1.6
+    nb = 5.8 if spec.get("basis") else 0
+    s5 = s4 + nb
     which = 0 if t < s4 else 1
     im = ken(bgs[min(which, len(bgs) - 1)], t / T).convert("RGBA")
     ov = Image.new("RGBA", (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(ov)
@@ -94,7 +97,23 @@ def frame(spec, bgs, t, T):
                     n = str(i + 1); fn = font(38, "x"); d.text((x + 56 - d.textlength(n, font=fn) / 2, y + 30), n, font=fn, fill=NAVY + (int(255 * ai),))
                     f = font(42, "b") if d.textlength(it, font=font(42, "b")) < 740 else font(36, "b")
                     d.text((x + 110, y + 32), it, font=f, fill=WHITE + (int(255 * ai),)); y += 136
+    elif t < s5:
+        B = spec["basis"]; a = ease((t - s4) / .5)
+        label(d, 90, 300, B.get("tag", "DASARNYA"), a, size=34)
+        y = title(d, 400, B["title"], a, size=78) + 40
+        for i, c in enumerate(B["cards"]):
+            ai = ease((t - s4 - .7 - 1.0 * i) / .5)
+            if ai <= 0: break
+            ft = font(40, "b"); lines = wrap(d, c["text"], ft, 820); h = 70 + len(lines) * 56 + 60
+            x = 90 + int((1 - ai) * 80)
+            d.rounded_rectangle((x, y, W - 90, y + h), radius=32, fill=(255, 255, 255, int(235 * ai)))
+            d.rectangle((x, y + 30, x + 12, y + h - 30), fill=YEL + (int(255 * ai),))
+            ty = y + 36
+            for ln in lines: d.text((x + 50, ty), ln, font=ft, fill=NAVY + (int(255 * ai),)); ty += 56
+            d.text((x + 50, ty + 10), c["src"], font=font(30, "s"), fill=BLUE + (int(255 * ai),))
+            y += h + 34
     else:
+        s4 = s5
         a = ease((t - s4) / .6)
         y = title(d, 700, spec["outro"], a, size=104)
         if t > s4 + .8:
@@ -111,7 +130,7 @@ def frame(spec, bgs, t, T):
 
 def main(cfg, out):
     spec = json.load(open(cfg))
-    T = 5.0 + 1.1 * len(spec["items"]) + 1.6 + 4.0
+    T = 5.0 + 1.1 * len(spec["items"]) + 1.6 + 4.0 + (5.8 if spec.get("basis") else 0)
     bgs = bg_frames(spec["bg"])
     tmpv = out + ".v.mp4"; tmpa = out + ".wav"
     p = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",

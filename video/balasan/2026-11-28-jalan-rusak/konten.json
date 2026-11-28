@@ -13,7 +13,25 @@
   "Sejak kapan rusak & dampaknya",
   "Nama & nomor HP (tidak diumumkan)"
  ],
- "outro": "Laporan jelas,|cepat diteruskan",
+ "outro": "Lengkap datanya,|lebih kuat usulannya",
  "cta": "Kirim DM sekarang",
- "mood": "tahunbaru"
+ "mood": "tahunbaru",
+ "basis": {
+  "tag": "KENAPA HARUS LENGKAP?",
+  "title": "Laporan & identitas lengkap,|lebih mudah kami usulkan",
+  "cards": [
+   {
+    "text": "Usulan dari hasil reses dirumuskan jadi Pokok Pikiran DPRD, lengkap dengan lokasi dan volume.",
+    "src": "Dasar: Permendagri 86/2017 Pasal 178"
+   },
+   {
+    "text": "Pengaduan memuat nama & alamat lengkap serta uraian masalah, dan boleh disertai bukti.",
+    "src": "Dasar: UU 25/2009 Pasal 42 ayat (3) & Pasal 43"
+   },
+   {
+    "text": "Dalam keadaan tertentu, identitas pelapor dapat dirahasiakan.",
+    "src": "Dasar: UU 25/2009 Pasal 42 ayat (5)"
+   }
+  ]
+ }
 }
